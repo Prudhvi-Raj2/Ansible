@@ -8,7 +8,7 @@
       state: present
   - name: install mysql
     ansible.builtin.package:
-      name: mysql-client
+      name: mysql
       state: present
   - name: start the nginx
     ansible.builtin.service:
