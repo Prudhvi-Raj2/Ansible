@@ -6,7 +6,7 @@
     ansible.builtin.package:
       name: nginx
       state: present
-      ansible.builtin.package:
+    ansible.builtin.package:
       name: mysqld
       state: present
   - name: start the nginx
