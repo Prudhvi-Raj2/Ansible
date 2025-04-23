@@ -1,6 +1,6 @@
 - name: variables
-  connection: local
   host: local
+  connection: local
   vars: #play level variable or globla variables
     COURSE: "Python with Prudhviraj"
     DURATION: "120 HRS"
