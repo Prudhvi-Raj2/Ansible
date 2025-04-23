@@ -1,5 +1,5 @@
 - name: variables
-  host: local
+  hosts: local
   connection: local
   vars: #play level variable or globla variables
     COURSE: "Python with Prudhviraj"
