@@ -4,7 +4,7 @@
   tasks:
   - name: handle undefine variable
     ansible.builtin.debug:
-      msg: "Hello {{ person | default('Ramesh') }}"
+      msg: "Hello {{ person | default('Kambala') }}"
 
   - name: convert string to list
     vars:
@@ -18,7 +18,7 @@
       course:
         name: ansible
         duration: 10hrs
-        trainer: sivakumar
+        trainer: prudhviraj
     ansible.builtin.debug:
       msg: "Course info: {{ course | dict2items }}"
 
@@ -27,7 +27,7 @@
       course:
       - {'key': 'name', 'value': 'ansible'}
       - {'key': 'duration', 'value': '10hrs'}
-      - {'key': 'trainer', 'value': 'sivakumar'}
+      - {'key': 'trainer', 'value': 'Prudhvi Raj'}
     ansible.builtin.debug:
       msg: "Course info: {{ course | items2dict }}"
 
@@ -35,13 +35,13 @@
     tags:
     - uppertolower
     vars:
-      name: "Sivakumar Reddy M"
+      name: "Prudhvi Raj Kambala"
     ansible.builtin.debug:
       msg: "Hello {{ name | lower }}"
 
   - name: convert lower to upper
     vars:
-      name: "Sivakumar Reddy M"
+      name: "Prudhvi Raj Kambala"
     ansible.builtin.debug:
       msg: "Hello {{ name | upper }}"
 
