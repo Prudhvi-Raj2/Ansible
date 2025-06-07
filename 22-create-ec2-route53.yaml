@@ -34,9 +34,9 @@
   #     msg: "{{ item.item }} : {{ item.instances[0].private_ip_address}}"
   #   loop: "{{ ec2_info.results }}"
 
-  - name: print Private private_ip_address
+  - name: print private private_ip_addresses
     ansible.builtin.debug:
-      msg: "{{  item.instance[0].private_ip_address }}"
+      msg: "{{  item.instances[0].private_ip_address }}"
     loop: "{{ ec2_info.results }}"
   
   - name: create private ip r53 records
@@ -46,7 +46,7 @@
       record: "{{ item.item}}.{{ zone }}"
       type: A
       ttl: 1
-      value: "{{  item.instance[0].private_ip_address }}"
+      value: "{{  item.instances[0].private_ip_address }}"
       wait: true
     loop: "{{ ec2_info.results}}"  
       
